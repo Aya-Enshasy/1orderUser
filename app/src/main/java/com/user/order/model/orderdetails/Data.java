@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.user.order.model.ImageData;
 
 public class Data implements Serializable
 {
@@ -123,6 +124,18 @@ public class Data implements Serializable
     @SerializedName("attachments")
     @Expose
     private List<com.user.order.model.orders.publicOrders.Attachment> attachments;
+
+    @SerializedName("attachments")
+    private List<ImageData> imageData;
+
+    public List<ImageData> getImageData() {
+        return imageData;
+    }
+
+    public void setImageData(List<ImageData> imageData) {
+        this.imageData = imageData;
+    }
+
     private final static long serialVersionUID = 2647593032742081L;
 
     public Integer getId() {

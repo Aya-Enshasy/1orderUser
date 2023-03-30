@@ -1,6 +1,7 @@
 package com.user.order.model.orders.publicOrders;
 
 import com.google.gson.annotations.SerializedName;
+import com.user.order.model.ImageData;
 import com.user.order.model.orderdetails.Driver;
 
 import java.io.Serializable;
@@ -116,8 +117,19 @@ public class OrderData implements Serializable {
     @SerializedName("status_translation")
     private String statusTranslation;
 
+//    @SerializedName("attachments")
+//    private List<Attachment> attachments;
+
     @SerializedName("attachments")
-    private List<Attachment> attachments;
+    private List<ImageData> imageData;
+
+    public List<ImageData> getImageData() {
+        return imageData;
+    }
+
+    public void setImageData(List<ImageData> imageData) {
+        this.imageData = imageData;
+    }
 
     @SerializedName("driver")
     private Driver driver;
@@ -417,12 +429,12 @@ public class OrderData implements Serializable {
     public void setStatusTranslation(String statusTranslation) {
         this.statusTranslation = statusTranslation;
     }
-
-    public List<Attachment> getAttachments() {
-        return attachments;
-    }
-
-    public void setAttachments(List<Attachment> attachments) {
-        this.attachments = attachments;
-    }
+//
+//    public List<Attachment> getAttachments() {
+//        return attachments;
+//    }
+//
+//    public void setAttachments(List<Attachment> attachments) {
+//        this.attachments = attachments;
+//    }
 }

@@ -83,7 +83,7 @@ public class CreateOrderActivity extends AppCompatActivity {
 
     private PublicShopData shop;
 
-    private List<Attachment> listImages;
+    private List<ImageData> listImages;
     private OrderImagesAdapter imagesAdapter;
 
     @OnClick(R.id.card_select_image)
@@ -185,7 +185,7 @@ public class CreateOrderActivity extends AppCompatActivity {
 
         List<MultipartBody.Part> images = new ArrayList<>();
         for (int i = 0; i < listImages.size(); i++)
-            images.add(HelperMethods.convertFileToMultiPart(listImages.get(i).getImageUrl(), "attachment[]"));
+            images.add(HelperMethods.convertFileToMultiPart(listImages.get(i).getImage(), "attachment[]"));
 
         RequestBody shopName = HelperMethods.convertToRequestBody(shop.getName());
         RequestBody deliveryCostBody = HelperMethods.convertToRequestBody(String.valueOf(deliveryCost));

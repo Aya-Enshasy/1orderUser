@@ -299,10 +299,10 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
 
             }
 
-            imagesAdapter = new OrderImagesAdapter(this, orderDetails.getAttachments(), R.layout.row_order_images);
+            imagesAdapter = new OrderImagesAdapter(this, orderDetails.getImageData(), R.layout.row_order_images);
             recyclerImages.setAdapter(imagesAdapter);
 
-            if (orderDetails.getAttachments().isEmpty()) {
+            if (orderDetails.getImageData().isEmpty()) {
                 tv_text_order_details.setVisibility(View.GONE);
             } else {
                 tv_text_order_details.setVisibility(View.VISIBLE);
@@ -610,7 +610,7 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
 //                                    }
 
 
-                            imagesAdapter = new OrderImagesAdapter(PublicOrderDetailsActivity.this, response.body().getData().getAttachments(), R.layout.row_order_images);
+                            imagesAdapter = new OrderImagesAdapter(PublicOrderDetailsActivity.this, response.body().getData().getImageData(), R.layout.row_order_images);
                             recyclerImages.setAdapter(imagesAdapter);
 
                             if (response.body().getData().getAttachments().isEmpty()) {

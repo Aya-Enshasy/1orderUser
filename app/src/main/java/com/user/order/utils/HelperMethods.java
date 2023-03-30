@@ -74,7 +74,7 @@ public class HelperMethods {
     public static String ADDRESS;
     public static String OTHER_ADDRESS;
     private static String imageUrl;
-    public static List<Attachment> listImagesUrls = new ArrayList<>();
+    public static List<ImageData> listImagesUrls = new ArrayList<>();
 
     public static String getImageUrl() {
         return imageUrl;
@@ -456,7 +456,7 @@ public class HelperMethods {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    public static void selectMultipleImage(Activity activity, List<Attachment> listImages, OrderImagesAdapter adapter) {
+    public static void selectMultipleImage(Activity activity, List<ImageData> listImages, OrderImagesAdapter adapter) {
 
         Album.initialize(AlbumConfig.newBuilder(activity)
                 .setAlbumLoader(new MediaLoader()).build());
@@ -468,7 +468,7 @@ public class HelperMethods {
                 .selectCount(30)
                 .onResult(result -> {
                     for (int i = 0; i < result.size(); i++) {
-                        listImagesUrls.add(new Attachment(result.get(i).getPath()));
+                        listImagesUrls.add(new ImageData(result.get(i).getPath()));
                     }
                     listImages.addAll(listImagesUrls);
                     adapter.notifyDataSetChanged();

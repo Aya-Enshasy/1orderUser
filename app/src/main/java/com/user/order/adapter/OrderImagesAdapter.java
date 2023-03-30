@@ -24,11 +24,11 @@ public class OrderImagesAdapter extends RecyclerView.Adapter<OrderImagesAdapter.
     private static final String TAG = OrderImagesAdapter.class.getSimpleName();
 
     private Activity activity;
-    private List<Attachment> listImages;
+    private List<ImageData> listImages;
     private int layoutRes;
     private LayoutInflater inflater;
 
-    public OrderImagesAdapter(Activity activity, List<Attachment> listImages, int layoutRes) {
+    public OrderImagesAdapter(Activity activity, List<ImageData> listImages, int layoutRes) {
         this.activity = activity;
         this.listImages = listImages;
         this.layoutRes = layoutRes;
@@ -43,9 +43,9 @@ public class OrderImagesAdapter extends RecyclerView.Adapter<OrderImagesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull OrderImagesHolder holder, int position) {
-        Attachment image = listImages.get(position);
+        ImageData image = listImages.get(position);
         if (image != null){
-            Glide.with(activity).load( listImages.get(position).getImageUrl()).placeholder(R.drawable.app_logo).into(holder.rivOrderImage);
+            Glide.with(activity).load( listImages.get(position).getImage()).placeholder(R.drawable.app_logo).into(holder.rivOrderImage);
             Log.e("TAG",  listImages.get(position).getImage()+"");
         }
 

@@ -152,7 +152,6 @@ public class PublicOrderFragment extends Fragment {
 
     }
 
-
     @Override
     public void onResume() {
         super.onResume();
@@ -167,6 +166,7 @@ public class PublicOrderFragment extends Fragment {
 
         }
     }
+
     @Override
     public void onStart() {
         super.onStart();
