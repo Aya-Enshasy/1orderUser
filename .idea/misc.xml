@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/1Order/app/src/main/res/drawable-v24/chat_top_background.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable-v24/ic_add_image.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable-v24/ic_baseline_camera_alt_24.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable-v24/ic_baseline_image_24.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable-v24/massage.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/bg_btn.xml" value="0.248" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/bg_check.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/bg_input.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/bg_ll_quantity.xml" value="0.244" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/bg_overlay_item.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/btn_background.xml" value="0.255" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/cancle_btn.xml" value="0.248" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/card.xml" value="0.2255" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/contact_us1.xml" value="0.2545" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/dialog.xml" value="0.2545" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.244" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_fav.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_gallery_svgrepo_com.xml" value="0.248" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_icon_added_favorite.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_icon_back.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_icon_location.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_icon_orders.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_location_svgrepo_com.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_mask_group_48.xml" value="0.211" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_notfav.xml" value="0.2555" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_privacy_svgrepo_com.xml" value="0.255" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_undraw_login_re_4vu2.xml" value="0.255" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_undraw_push_notifications_re_t84m.xml" value="0.2255" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_user_defult.xml" value="0.255" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/ic_verification_symbol_svgrepo_com.xml" value="0.244" />
+        <entry key="..\:/1Order/app/src/main/res/drawable/transparent.xml" value="0.2545" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_cart.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_change_password.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_confirm_pay.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_contact_us.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_create_order.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_direction_map.xml" value="0.72" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_forget_password.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_map_taking.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_maps.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_order_details.xml" value="0.2" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_payment.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_privacy.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_product_details.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_public_order_details.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_public_payment.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_rating.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_reset_password.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_resturant_details.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_shop_details.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_shops.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_sign_up.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/activity_verification.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/cancel_resone.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/cancel_resone_dialog.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/custom_spinner_dropdown.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_add_rate.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_add_to_cart.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_cancel_order.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_countries_codes.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_delete_account.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_discount_code.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_languages.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_logout.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/dialog_remove_cart.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/extras_dialog.xml" value="0.188" />
+        <entry key="..\:/1Order/app/src/main/res/layout/extras_item.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/food_details.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/fragment_favorite.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/fragment_notifications.xml" value="0.2" />
+        <entry key="..\:/1Order/app/src/main/res/layout/fragment_one_order.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/fragment_orders.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/fragment_public_order.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/layout_progress.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/layout_trips_tabs.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/loader_dialog.xml" value="0.24895833333333334" />
+        <entry key="..\:/1Order/app/src/main/res/layout/login_dialog.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/notifications_item_shimmer.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/order_items.xml" value="0.6" />
+        <entry key="..\:/1Order/app/src/main/res/layout/pick_image_dialog.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/progress_dialog.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/radio.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/receive_massage.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/routes_dialog.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_cart_order.xml" value="0.6" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_country.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_favorites.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_home_categories.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_home_offers.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_language.xml" value="0.4" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_notifications.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_order_add_images.xml" value="0.6" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_order_images.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_orders.xml" value="0.6" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_product_images.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_product_ingredients.xml" value="0.6" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_public_orders.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_public_shops.xml" value="0.264" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_rating.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_resturant_categories.xml" value="1.2" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_resturant_offers.xml" value="0.176" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_resturant_sandwich.xml" value="0.6" />
+        <entry key="..\:/1Order/app/src/main/res/layout/row_shop.xml" value="0.536" />
+        <entry key="..\:/1Order/app/src/main/res/layout/send_message.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/snack_error_layout.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/snack_success_layout.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/test.xml" value="0.152" />
+        <entry key="..\:/1Order/app/src/main/res/layout/toast_error_layout.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/layout/toast_success_layout.xml" value="0.25" />
+        <entry key="..\:/1Order/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Embedded JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

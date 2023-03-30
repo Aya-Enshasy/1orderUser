@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activivtes.home.publicOrders.CreateOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/iv_back"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Resturant Name"
+            android:textColor="@color/colorMainText"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_restruant_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:outlineSpotShadowColor="@color/colorOverlay"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_shop_image"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/resturant" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/iv_shop_image"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_shop_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:text="Museum Restaurant"
+                            android:textColor="@color/colorMainText"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rel_delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_restruant_data"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp">
+
+                <TextView
+                    android:id="@+id/tv_text_delivery_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/delivery_address"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_delivery_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_text_delivery_address"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_input1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_4sdp">
+
+                    <TextView
+                        android:id="@+id/tv_delivery_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Al Nasser Street"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_other_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_delivery_address"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Al Nasser Street"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_cnahge_delivery_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ll_delivery_address"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="9dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/change"
+                    android:textColor="@color/colorRed"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_order_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_delivery_address"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp">
+
+                <TextView
+                    android:id="@+id/tv_text_order_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/order_details"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_text_order_details"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/input_order_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint="@string/order_details"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_order_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_order_details"
+                android:layout_marginStart="@dimen/_16sdp">
+
+                <TextView
+                    android:id="@+id/tv_text_order_images"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/order_images"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_text_order_images"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_order_images"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            tools:itemCount="2"
+                            tools:listitem="@layout/row_order_add_images" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_select_image"
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_margin="@dimen/_8sdp"
+                            android:outlineSpotShadowColor="@color/colorOverlay"
+                            app:cardCornerRadius="@dimen/_4ssp"
+                            app:cardElevation="@dimen/_4sdp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_10sdp">
+
+                                <ImageView
+                                    android:id="@+id/iv_order_image"
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_round_add"
+                                    app:tint="@color/colorMainText" />
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rel_order_images"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_text_bill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/bill"
+                    android:textColor="@color/colorMainText"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_text_delivary_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/dilevary"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_delivary_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_text_bill"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_text_tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/tax"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_text_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/total"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_create_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="@drawable/bg_btn"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/create_order"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:theme="@style/ButtonThemeBlack" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

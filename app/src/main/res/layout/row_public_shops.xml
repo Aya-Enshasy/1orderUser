@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_12sdp"
+    android:layout_marginEnd="@dimen/_12sdp"
+    android:elevation="@dimen/_3sdp"
+    android:background="@drawable/bg_check"
+
+    android:layout_marginTop="@dimen/_8sdp"
+    android:paddingStart="@dimen/_6sdp"
+    android:paddingEnd="@dimen/_6sdp"
+    android:paddingTop="@dimen/_6sdp"
+    android:paddingBottom="@dimen/_6sdp"
+    android:outlineSpotShadowColor="@color/colorSubText"
+    android:layout_marginBottom="@dimen/_4sdp"
+ >
+
+
+    <ImageView
+        android:id="@+id/iv_shop_image"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/_ic_icon_instagram"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Museum Restaurant"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorMainText"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_shop_distance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_shop_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_shop_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingBottom="5dp"
+        android:text="18km"
+        android:textColor="@color/colorOverlay2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_shop_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shop_name" />
+
+    <TextView
+        android:id="@+id/tv_shop_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/colorBlue"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_16sdp">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_tab_selected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textSize="@dimen/_14ssp" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_trips_status"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_tap_1order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/on_order"
+                android:textSize="@dimen/_14ssp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <View
+                android:id="@+id/view_tap_1order"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@id/tv_tap_1order"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bg_tab_selected" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_tap_public"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"
+                android:text="@string/public_"
+                android:textColor="@color/colorMainText"
+                android:textSize="@dimen/_14ssp" />
+
+            <View
+                android:id="@+id/view_tap_public"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@id/tv_tap_public"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bg_card" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

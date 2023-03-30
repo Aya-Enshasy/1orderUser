@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="@dimen/_60sdp"
+    android:id="@+id/card_category"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_4ssp"
+    app:cardElevation="@dimen/_4sdp"
+    android:outlineSpotShadowColor="@color/dark_gray"
+    android:layout_margin="@dimen/_8sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_category"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/roundedImageVRounded"
+            app:srcCompat="@drawable/default_slider_image2" />
+
+        <TextView
+            android:id="@+id/tv_category_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_category"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Pizzas"
+            android:textColor="@color/colorDarkBlue"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

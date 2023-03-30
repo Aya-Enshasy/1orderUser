@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.1Order" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorAccent</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnSecondary">@color/colorAccent</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">@color/colorAccent</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="ButtonThemeBlue" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBlue</item>
+    </style>
+
+    <style name="ButtonThemeBlack" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="ButtonThemeRed" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorRed</item>
+    </style>
+
+    <style name="NavigationTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryVariant">@color/colorNavItem</item>
+        <item name="colorOnPrimary">@color/colorNavItem</item>
+        <item name="colorSecondary">@color/colorNavItem</item>
+        <item name="colorSecondaryVariant">@color/colorNavItem</item>
+        <item name="colorOnSecondary">@color/colorNavItem</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RateBarTheme" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/ic_icon_fill_star</item>
+        <item name="android:indeterminateDrawable">@drawable/ic_icon_empty_star</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+        <item name="colorControlNormal">@color/colorNavItem</item>
+        <item name="colorControlActivated">@color/colorRed</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:background="@drawable/ms__drawable"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:layout_marginStart="@dimen/_15sdp">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/pic_image"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+        <ImageView
+            android:id="@+id/cam"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:srcCompat="@drawable/ic_baseline_camera_alt_24"
+            app:tint="@color/colorPrimary"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <ImageView
+            android:id="@+id/gallery"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:srcCompat="@drawable/ic_baseline_image_24"
+            app:tint="@color/colorPrimary"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat5"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat4">
+
+        <TextView
+            android:id="@+id/cam_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/camera"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/montserrat_semi_bold"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/gallery_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/gallery"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/montserrat_semi_bold"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

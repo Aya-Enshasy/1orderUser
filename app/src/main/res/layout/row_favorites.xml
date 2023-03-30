@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_12sdp"
+    android:layout_marginEnd="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_4sdp"
+    app:cardElevation="@dimen/_6sdp"
+    android:outlineSpotShadowColor="@color/colorFindMore"
+    app:cardCornerRadius="@dimen/_12sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_shop_image"
+            android:layout_width="@dimen/_60sdp"
+            app:civ_border_color="@color/dark_gray"
+            app:civ_border_width="1dp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/ic_user_defult" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/civ_shop_image"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textColor="@color/colorMainText"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_favorite"
+                    android:layout_width="@dimen/_34sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/ic_icon_added_favorite" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_shop_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_icon_location"
+                android:drawablePadding="@dimen/_6sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorMainText"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+                <com.whinc.widget.ratingbar.RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:rb_click_rating="false"
+                    app:rb_empty="@drawable/ic_icon_empty_star"
+                    app:rb_fill="@drawable/ic_icon_fill_star"
+                    app:rb_max_count="5"
+                    app:rb_space="2dp"
+                    app:rb_touch_rating="false" />
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_toEndOf="@+id/ratingBar"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="0.0"
+                    android:textColor="@color/colorMainText"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

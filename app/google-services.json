@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "979436602920",
+    "firebase_url": "https://order-4b011-default-rtdb.firebaseio.com",
+    "project_id": "order-4b011",
+    "storage_bucket": "order-4b011.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979436602920:android:9944a1116c44464f3d971d",
+        "android_client_info": {
+          "package_name": "com.drivers.oneorderdrivers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979436602920-cr0f81ha10ouqfvu9r9m1rv761tlhmea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drivers.oneorderdrivers",
+            "certificate_hash": "7757b8603d68f202aa5c54f6ca7a6d898ba41c45"
+          }
+        },
+        {
+          "client_id": "979436602920-t8lka473on1chouc8kk0qu8bqlkpkpi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBso_XvysPF1BpXNc8y46h8Oa2O-mkc2zg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979436602920-t8lka473on1chouc8kk0qu8bqlkpkpi8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "979436602920-f7s3fqhit4bs1aqcdv4c43ailgh4vj2u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ios.SpaceTech.OrderUser"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979436602920:android:e97491a0d0dd579b3d971d",
+        "android_client_info": {
+          "package_name": "com.user.order"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979436602920-q9edqdt2ebjctudp5rgihbe9bpm44gbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.user.order",
+            "certificate_hash": "1afc2b6d9ae9f212ad0eb4760fbc81bbf6ecd1b6"
+          }
+        },
+        {
+          "client_id": "979436602920-t8lka473on1chouc8kk0qu8bqlkpkpi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBso_XvysPF1BpXNc8y46h8Oa2O-mkc2zg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979436602920-t8lka473on1chouc8kk0qu8bqlkpkpi8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "979436602920-f7s3fqhit4bs1aqcdv4c43ailgh4vj2u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ios.SpaceTech.OrderUser"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

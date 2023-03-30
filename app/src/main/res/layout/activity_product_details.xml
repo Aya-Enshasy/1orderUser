@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    tools:context=".ui.activivtes.productDetails.ProductDetailsActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_product_images"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp" />
+
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dotsColor="@color/colorAccent"
+            app:dotsCornerRadius="6dp"
+            app:dotsSize="10dp"
+            app:dotsSpacing="4dp"
+            app:dotsStrokeWidth="6dp"
+            app:dotsStrokeColor="@color/colorSubText"
+            app:progressMode="true"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_back"
+            app:tint="@color/colorAccent"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_product_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_200sdp"
+        app:cardElevation="@dimen/_14sdp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_22sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/tv_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Vegetable Pizza"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_product_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="$140.00 "
+                        android:textColor="@color/colorRed"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_product_description"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_product_name"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Italian Dough Pizza, Vegetable Pizza Containing Onions, Corn, Mushrooms, Tomato Sauce And Mozzarella Cheese"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_text_ingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/Ingredients"
+                    android:textColor="@color/colorMainText"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_text_options"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Select_Options"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorMainText"
+                    android:textAlignment="viewStart"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_product_name"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/amount"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="16sp"
+                        android:layout_centerVertical="true"/>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:background="@drawable/bg_ll_quantity"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true">
+
+                        <ImageView
+                            android:layout_weight="1"
+                            android:id="@+id/iv_decrease"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_round_remove"
+                            app:tint="@color/colorMainText"/>
+
+                        <TextView
+                            android:id="@+id/tv_quantity"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="01"
+                            android:textColor="@color/colorMainText"
+                            android:textSize="16sp"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_weight="1"
+                            android:id="@+id/iv_increase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_round_add"
+                            app:tint="@color/colorMainText"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/total"
+                        android:textColor="@color/colorMainText"
+                        android:textSize="16sp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="104$"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_add_to_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_to_cart"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/bg_btn"
+                    android:theme="@style/ButtonThemeBlack"
+                    android:layout_below="@id/cb_terms"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

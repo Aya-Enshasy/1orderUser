@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0E2E3B</color>
+    <color name="colorPrimaryDark">#001327</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorRed">#CB0000</color>
+    <color name="colorBlue">#2F73B8</color>
+    <color name="colorLightBlue">#96B8DB</color>
+    <color name="colorDarkBlue">#0E4C75</color>
+    <color name="colorInput">#EFEFEF</color>
+    <color name="colorBlack">#000000</color>
+
+
+
+    <color name="colorBackground">#FAFAFA</color>
+    <color name="colorMainText">#001327</color>
+    <color name="colorSubText">#B3B3B3</color>
+    <color name="colorOtherText">#949CA4</color>
+    <color name="colorOtherText1">#707070</color>
+    <color name="colorNavItem">#C7C7C7</color>
+    <color name="colorSelectLanguage">#DADADA</color>
+    <color name="colorGreen">#008100</color>
+    <color name="colorYallow">#ffc63a</color>
+    <color name="colorYallow1">#EEBE00</color>
+    <color name="colorLightGrey">#F6F6F6</color>
+    <color name="colorLightGrey1">#E4E6E8</color>
+
+    <color name="colorFindMore">#ABACAD</color>
+    <color name="colorOverlay">#558E8F8F</color>
+    <color name="colorOverlay2">#90222222</color>
+    <color name="colorOverlay3">#90AEA6A6</color>
+    <color name="dark_gray">#B3B3B3</color>
+
+
+    <color name="red">#CB0000</color>
+    <color name="yellow">#EAAF00</color>
+    <color name="green">#249A00</color>
+</resources>

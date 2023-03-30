@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_12sdp"
+    android:layout_marginBottom="@dimen/_4sdp"
+    android:outlineSpotShadowColor="@color/colorFindMore"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_3sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:id="@+id/rel_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tv_invoice_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="#000123"
+                android:textColor="@color/colorOtherText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="23/02/2023"
+                android:textColor="@color/colorOtherText"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rel_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_invoice"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="Shop Name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_marginEnd="7dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_order_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_order_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="1008.5 SAR"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_shop_name"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/tv_order_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/public_order"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_type"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="-17dp"
+                android:layout_marginEnd="3dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

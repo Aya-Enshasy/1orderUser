@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_8sdp">
+
+    <RelativeLayout
+        android:id="@+id/rel_discount_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_below="@id/card_restruant_data">
+
+        <TextView
+            android:id="@+id/tv_text_discount_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/discount_code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/ll_discount_code"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/tv_text_discount_code">
+
+            <EditText
+                android:id="@+id/input_discount_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_input1"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="code"
+                android:padding="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorMainText"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_discount_code"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

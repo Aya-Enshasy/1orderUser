@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:id="@+id/card_category"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_4ssp"
+    app:cardElevation="@dimen/_12sdp"
+    android:outlineSpotShadowColor="@color/colorSubText"
+    android:layout_margin="@dimen/_8sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_order_image"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_calexico"
+            app:riv_corner_radius="@dimen/_4sdp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

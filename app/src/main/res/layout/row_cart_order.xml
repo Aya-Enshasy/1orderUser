@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_65sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardElevation="@dimen/_12sdp"
+    android:outlineSpotShadowColor="@color/dark_gray"
+    app:cardCornerRadius="@dimen/_12sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_sandwich_image"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:shapeAppearanceOverlay="@style/roundedImageVRounded"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_sandwich1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_sandwich_image">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp">
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="Museum Restaurant"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorMainText"
+                    android:layout_marginStart="@dimen/_8sdp" />
+
+                <ImageView
+                    android:id="@+id/remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_icon_clear" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="Quantity: 8"
+                android:textSize="13sp"
+                android:textColor="@color/colorMainText"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_8sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp" >
+
+                <TextView
+                    android:id="@+id/tv_extra_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_icon_add_items"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/extra_items"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_meal_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="$150.00 "
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlue"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_8sdp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
