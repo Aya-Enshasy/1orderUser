@@ -122,10 +122,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             intent.putExtra(Const.KEY_INVOICE_NUMBER, invoice_no);
             intent.putExtra(Const.KEY_CLIENT_ID, user_id);
             intent.putExtra(Const.KEY_ORDER_ID, public_order_id);
-            intent.putExtra(Const.KEY_PUBLIC_CHAT, Const.KEY_PUBLIC_CHAT);
+            intent.putExtra(Const.KEY_CHAT, "chat_public");
             intent.putExtra(Const.KEY_STATUS, status);
             intent.putExtra(Const.KEY_ORDER_ID, public_order_id);
-
         } else if (type.equals("public")) {
             String public_order_id = null;
             try {

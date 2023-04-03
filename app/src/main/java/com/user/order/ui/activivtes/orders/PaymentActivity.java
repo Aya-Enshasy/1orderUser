@@ -133,52 +133,57 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void sendPaymentData() {
-        loaderDialog();
 
-        HelperMethods.get1OrderAPI().sendOfferOrder(
-                        shop_id,
-                        type_of_receive,
-                        delivery_type,
-                        country_id,
-                        items_id,
-                        items_qty,
-                        payment_type,
-                        lat,
-                        lng,
-                        delivery,
-                        sub_total_1,
-                        discount,
-                        sub_total_2,
-                        total,
-                        items_price,
-                        destination_lat,
-                        destination_lng,
-                        destination_address,
-                        tax,
-                        HelperMethods.getUserToken(this),
-                        HelperMethods.getAppLanguage(this))
-                .enqueue(new Callback<ContactUs>() {
-                    @RequiresApi(api = Build.VERSION_CODES.M)
-                    @Override
-                    public void onResponse(Call<ContactUs> call, Response<ContactUs> response) {
-                        loader_dialog.dismiss();
-                        if (response.isSuccessful()) {
-                            PreferencesManager.setStringPreferences("finish", "finish");
-                            PreferencesManager.setStringPreferences(Const.KEY_OFFER, "");
-                            finish();
-                            Toast.makeText(PaymentActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+        if (PreferencesManager.getStringPreferences("isOpen").equals("1")) {
+            loaderDialog();
+            HelperMethods.get1OrderAPI().sendOfferOrder(
+                            shop_id,
+                            type_of_receive,
+                            delivery_type,
+                            country_id,
+                            items_id,
+                            items_qty,
+                            payment_type,
+                            lat,
+                            lng,
+                            delivery,
+                            sub_total_1,
+                            discount,
+                            sub_total_2,
+                            total,
+                            items_price,
+                            destination_lat,
+                            destination_lng,
+                            destination_address,
+                            tax,
+                            HelperMethods.getUserToken(this),
+                            HelperMethods.getAppLanguage(this))
+                    .enqueue(new Callback<ContactUs>() {
+                        @RequiresApi(api = Build.VERSION_CODES.M)
+                        @Override
+                        public void onResponse(Call<ContactUs> call, Response<ContactUs> response) {
+                            loader_dialog.dismiss();
+                            if (response.isSuccessful()) {
+                                PreferencesManager.setStringPreferences("finish", "finish");
+                                PreferencesManager.setStringPreferences(Const.KEY_OFFER, "");
+                                finish();
+                                Toast.makeText(PaymentActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+
                         }
 
-                    }
+                        @Override
+                        public void onFailure(Call<ContactUs> call, Throwable t) {
+                            loader_dialog.dismiss();
+                            Log.d("TAG", "onFailure: " + t.getMessage());
+                        }
+                    });
 
-                    @Override
-                    public void onFailure(Call<ContactUs> call, Throwable t) {
-                        loader_dialog.dismiss();
-                        Log.d("TAG", "onFailure: " + t.getMessage());
-                    }
-                });
+        }
+        else {
+                HelperMethods.showCustomToast(this,getString(R.string.restaurant_is_closed_now), false);
 
-
+            }
     }
 
     protected void loaderDialog() {
@@ -191,6 +196,7 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void clickListeners() {
+        if (PreferencesManager.getStringPreferences("isOpen").equals("1")) {
 
         String userJson = PreferencesManager.getStringPreferences(Const.KEY_Meal);
         Gson gson = new Gson();
@@ -281,6 +287,12 @@ public class PaymentActivity extends AppCompatActivity {
                         loader_dialog.dismiss();
                     }
                 });
+        }
+
+        else {
+            HelperMethods.showCustomToast(this,getString(R.string.restaurant_is_closed_now), false);
+
+        }
     }
 
 }

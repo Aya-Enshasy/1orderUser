@@ -124,12 +124,16 @@ public class CartActivity extends AppCompatActivity {
 
                 if (RadioButtonState1 == true) {
                     double total = totalPrice + (tax * totalPrice) + 0;
-                    String tot = new StringBuilder().append(total - dis).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
+                    double total_format = total - dis;
+                    total_format = Double.parseDouble(new DecimalFormat("#.#").format(total_format));
+                    String tot = new StringBuilder().append(total_format).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
                     binding.tvTotal.setText(tot);
 
                 } else {
                     double total = totalPrice + (tax * totalPrice) + delivary;
-                    String tot = new StringBuilder().append(total - dis).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
+                    double total_format = total - dis;
+                    total_format = Double.parseDouble(new DecimalFormat("#.#").format(total_format));
+                    String tot = new StringBuilder().append(total_format).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
                     binding.tvTotal.setText(tot);
                 }
 
@@ -220,7 +224,9 @@ public class CartActivity extends AppCompatActivity {
                                     binding.tvDelivaryCost.setText(delivary_cost);
                                     delivary = response.body().getDeliveryCost();
                                     double total = sub1 + (tax * sub1) + response.body().getDeliveryCost();
-                                    String tot = new StringBuilder().append(total - dis).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
+                                    double total_format = total - dis;
+                                    total_format = Double.parseDouble(new DecimalFormat("#.#").format(total_format));
+                                    String tot = new StringBuilder().append(total_format).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
                                     binding.tvTotal.setText(tot);
 
                                     binding.tvTextBill.setVisibility(View.VISIBLE);
@@ -293,8 +299,9 @@ public class CartActivity extends AppCompatActivity {
                     double total = pricee + (tax * pricee);
                     double val= total-dis;
                     double value = Double.parseDouble(new DecimalFormat("#.#").format(val));
-
-                    String tot = new StringBuilder().append(value).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
+                    double total_format = value;
+                    total_format = Double.parseDouble(new DecimalFormat("#.#").format(total_format));
+                    String tot = new StringBuilder().append(total_format).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
                     binding.tvTotal.setText(tot);
 
                 } else {
@@ -306,7 +313,9 @@ public class CartActivity extends AppCompatActivity {
                     binding.tvChangeDeliveryAddress.setVisibility(View.VISIBLE);
                     double pricee = Double.parseDouble(binding.tvPrice.getText().toString());
                     double total = pricee + (tax * pricee) + delivary;
-                    String tot = new StringBuilder().append(total - dis).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
+                    double total_format = total - dis;
+                    total_format = Double.parseDouble(new DecimalFormat("#.#").format(total_format));
+                    String tot = new StringBuilder().append(total_format).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
                     binding.tvTotal.setText(tot);
 
                 }
@@ -387,7 +396,9 @@ public class CartActivity extends AppCompatActivity {
 
                     tax = Double.parseDouble(PreferencesManager.getStringPreferences(Const.KEY_TAX)) / 100;
                     double pricee = totalPrice;
-                    String total = new StringBuilder().append((pricee + delivary + (pricee * tax)) - response.body().getDiscountValue()).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
+                    double total_format = (pricee + delivary + (pricee * tax)) - response.body().getDiscountValue();
+                    total_format = Double.parseDouble(new DecimalFormat("#.#").format(total_format));
+                    String total = new StringBuilder().append(total_format).append(" ").append(HelperMethods.getCurrency(CartActivity.this)).toString();
                     binding.tvTotal.setText(total);
                 } else {
                     parseError(response);

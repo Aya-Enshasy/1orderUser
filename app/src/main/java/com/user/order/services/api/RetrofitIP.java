@@ -4,7 +4,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitIP {
-    private static final String TAG = RetrofitIP.class.getSimpleName();
 
     private static Retrofit retrofit = null;
 

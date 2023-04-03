@@ -52,7 +52,7 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
 
         Data notification = listNotifications.get(position);
         if (notification != null){
-            holder.tvTitle.setText(notification.getNotification().getStatus());
+            holder.tvTitle.setText(notification.getNotification().getTitle());
             holder.tvContent.setText(notification.getNotification().getMsg());
             holder.tvDate.setText(HelperMethods.getDate(activity, notification.getCreatedAt()));
 
@@ -63,7 +63,7 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
                     intent.putExtra(Const.KEY_INVOICE_NUMBER,notification.getNotification().getInvoiceNumber() );
                     intent.putExtra(Const.KEY_CLIENT_ID, notification.getNotification().getUserId());
                     intent.putExtra(Const.KEY_ORDER_ID, notification.getNotification().getPublicOrderId());
-                    intent.putExtra(Const.KEY_PUBLIC_CHAT, Const.KEY_PUBLIC_CHAT);
+                    intent.putExtra(Const.KEY_CHAT, "chat_public");
                     intent.putExtra(Const.KEY_STATUS, notification.getNotification().getStatus());
                     activity.startActivity(intent);
                 });

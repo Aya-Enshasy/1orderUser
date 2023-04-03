@@ -91,13 +91,17 @@
     <string name="no_rating_yet">لا توجد تقييمات حتى الآن</string>
     <string name="no_notification_yet">لا توجد إشعارات حتى الآن</string>
     <string name="no_favorite_yet">لا توجد مفضلات حتى الآن</string>
-    <string name="confirm">يتأكد</string>
+    <string name="confirm">تأكيد</string>
     <string name="preparing">جاري التحضير</string>
     <string name="ready">جاهز</string>
     <string name="on_way">على الطريق</string>
     <string name="waiting_client">في انتظار موافقة العميل</string>
     <string name="delivered">تم التوصيل</string>
     <string name="pending">قيد الانتظار</string>
+    <string name="Direction">الاتجاه</string>
+    <string name="Call_Restaurant">اتصل بالمطعم</string>
+    <string name="possible">ليست متاح التوصيل لهذه المنطقة</string>
+    <string name="cancelled">تم إلغاء هذا الطلب</string>
 
     <string name="why">لماذا تريد الفاء الطلب</string>
     <string name="amount">الكمية</string>

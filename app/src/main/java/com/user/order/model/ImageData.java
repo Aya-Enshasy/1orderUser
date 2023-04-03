@@ -3,7 +3,9 @@ package com.user.order.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ImageData {
+import java.io.Serializable;
+
+public class ImageData implements Serializable {
 
     @SerializedName("id")
     @Expose

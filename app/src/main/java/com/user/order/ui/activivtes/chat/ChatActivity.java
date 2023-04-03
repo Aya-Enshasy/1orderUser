@@ -94,7 +94,7 @@ public class ChatActivity extends AppCompatActivity {
 
         if (getIntent() != null) {
             id = Integer.parseInt(getIntent().getStringExtra(Const.KEY_ORDER_ID));
-            from = getIntent().getStringExtra(Const.KEY_PUBLIC_CHAT);
+            from = getIntent().getStringExtra(Const.KEY_CHAT);
             status = getIntent().getStringExtra(Const.KEY_STATUS);
             invoice_no = getIntent().getStringExtra(Const.KEY_INVOICE_NUMBER);
             user_id = getIntent().getStringExtra(Const.KEY_user_id);

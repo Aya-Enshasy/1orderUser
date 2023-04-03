@@ -46,7 +46,10 @@ import com.user.order.utils.Const;
 import com.user.order.utils.HelperMethods;
 import com.user.order.utils.PreferencesManager;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -108,6 +111,12 @@ public class SplashActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void run() {
+//                startActivity(new Intent(SplashActivity.this, MapsActivity.class)
+//                        .putExtra(Const.KEY_MAP, Const.AUTH));
+//                PreferencesManager.setStringPreferences(Const.KEY_CURRENT_LATITUDE, String.valueOf(lat));
+//                PreferencesManager.setStringPreferences(Const.KEY_CURRENT_LONGITUDE, String.valueOf(lng));
+//
+//                finish();
                 if (PreferencesManager.loadUserToken(SplashActivity.this, Const.KEY_USER_TOKEN) != null && !PreferencesManager.loadUserToken(SplashActivity.this, Const.KEY_USER_TOKEN).equals("")) {
                     if (HelperMethods.getDeliveryAddress(SplashActivity.this) != null) {
                         loadUserInfo();
@@ -127,7 +136,7 @@ public class SplashActivity extends AppCompatActivity {
                     PreferencesManager.setStringPreferences(Const.KEY_CURRENT_LONGITUDE, String.valueOf(lng));
                     finish();
                 }
-
+//
 
             }
         }, 5000);
@@ -250,8 +259,7 @@ public class SplashActivity extends AppCompatActivity {
                                             LocationServices.getFusedLocationProviderClient(SplashActivity.this)
                                                     .removeLocationUpdates(this);
                                             if (locationResult != null && locationResult.getLocations().size() > 0) {
-
-                                                lat = locationResult.getLastLocation().getLatitude();
+                                                 lat = locationResult.getLastLocation().getLatitude();
                                                 lng = locationResult.getLastLocation().getLongitude();
                                                 int index = locationResult.getLocations().size() - 1;
                                                 double latitude = locationResult.getLocations().get(index).getLatitude();

@@ -3,9 +3,10 @@ package com.user.order.model.orders.publicOrders;
 import com.google.gson.annotations.SerializedName;
 import com.user.order.model.Link;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class PublicOrdersData {
+public class PublicOrdersData implements Serializable {
 
     @SerializedName("current_page")
     private int currentPage;

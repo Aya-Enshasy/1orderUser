@@ -162,6 +162,10 @@
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
     <string name="Delivered">Delivered</string>
+    <string name="Direction">Direction</string>
+    <string name="Call_Restaurant">Call Restaurant</string>
+    <string name="cancelled">This order is cancelled</string>
+    <string name="possible">It is not available to deliver to this area</string>
 
     <string name="Logged">You Haven\'t Logged In Yet ,Please Go To</string>
 

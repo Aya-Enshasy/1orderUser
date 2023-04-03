@@ -30,10 +30,7 @@ public class OrderDetails implements Serializable
         this.code = code;
     }
 
-    public OrderDetails withCode(Integer code) {
-        this.code = code;
-        return this;
-    }
+
 
     public String getMessage() {
         return message;

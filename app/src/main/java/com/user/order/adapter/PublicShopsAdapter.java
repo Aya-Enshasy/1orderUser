@@ -113,8 +113,8 @@ public class PublicShopsAdapter extends RecyclerView.Adapter<PublicShopsAdapter.
             LatLng latLngFrom = new LatLng(Double.parseDouble(current_lat), Double.parseDouble(current_lng));
             LatLng latLngTo = new LatLng(shop.getGeometry().getLocation().getLatitude(), shop.getGeometry().getLocation().getLongitude());
             Log.e("max_lat", SphericalUtil.computeDistanceBetween(latLngTo, latLngFrom) + "");
-            double value = SphericalUtil.computeDistanceBetween(latLngFrom, latLngTo);
-            value = Double.parseDouble(new DecimalFormat("#.#").format(value));
+//            double value = SphericalUtil.computeDistanceBetween(latLngFrom, latLngTo);
+//            value = Double.parseDouble(new DecimalFormat("#.#").format(SphericalUtil.computeDistanceBetween(latLngFrom, latLngTo)));
 
         }
 

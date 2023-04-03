@@ -174,7 +174,7 @@
                     android:fontFamily="@font/montserrat_medium"
                     android:paddingStart="@dimen/_10sdp"
                     android:paddingEnd="@dimen/_10sdp"
-                    android:text="From Restaurant"
+                    android:text="@string/from_restaurant"
                     android:textColor="@color/colorMainText"
                     app:buttonTint="@color/colorBlue">
 

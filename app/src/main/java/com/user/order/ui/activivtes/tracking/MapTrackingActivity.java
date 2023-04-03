@@ -132,8 +132,8 @@ public class MapTrackingActivity extends AppCompatActivity implements OnMapReady
             binding.carNumber.setText("Car Number : " + PreferencesManager.getStringPreferences("vehicleType"));
             if (!PreferencesManager.getStringPreferences("rate").equals("")){
              value = Double.parseDouble(PreferencesManager.getStringPreferences("rate"));
-            value = Double.parseDouble(new DecimalFormat("#.#").format(value));
-            binding.rate.setText(value + "");}else {
+            binding.rate.setText( PreferencesManager.getStringPreferences("rate"));
+            }else {
                 value = 0.0;
                 value = Double.parseDouble(new DecimalFormat("#.#").format(value));
                 binding.rate.setText(value + "");
@@ -254,7 +254,7 @@ public class MapTrackingActivity extends AppCompatActivity implements OnMapReady
                     .putExtra(Const.KEY_INVOICE_NUMBER, PreferencesManager.getStringPreferences(Const.KEY_INVOICE_NUMBER))
                     .putExtra(Const.KEY_driver_id,  PreferencesManager.getStringPreferences(Const.KEY_driver_id))
                     .putExtra(Const.KEY_ORDER_ID,  PreferencesManager.getStringPreferences(Const.KEY_ORDER_ID))
-                    .putExtra(Const.KEY_PUBLIC_CHAT, Const.KEY_CHAT)
+                    .putExtra(Const.KEY_CHAT, PreferencesManager.getStringPreferences(Const.KEY_CHAT))
                     .putExtra(Const.KEY_STATUS,  PreferencesManager.getStringPreferences(Const.KEY_STATUS));
             startActivity(intent);
         });

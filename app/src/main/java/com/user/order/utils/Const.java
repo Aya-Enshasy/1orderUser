@@ -51,8 +51,7 @@ public interface Const {
     String KEY_ORDER_ID = "order_id";
     String KEY_MEAL_SHOP = "meals_shop";
     String KEY_EXTRA_ITEMS = "extra_items";
-    String KEY_PUBLIC_CHAT = "chat_public";
-    String KEY_CHAT = "chat";
+     String KEY_CHAT = "chat";
     String KEY_STATUS = "delivered";
     String KEY_FCM_TOKEN = "fcm_token";
     String KEY_INVOICE_NUMBER = "invoice_number";

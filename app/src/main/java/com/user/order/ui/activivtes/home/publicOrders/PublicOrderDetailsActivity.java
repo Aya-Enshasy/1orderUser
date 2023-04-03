@@ -46,6 +46,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,7 +94,7 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
     private OrderData orderDetails;
     private String orderId, clientId, InvoiceNumber;
     private Dialog cancel_dialog;
-    private List<Attachment> listImages;
+    private List<OrderData> listImages;
     private OrderImagesAdapter imagesAdapter;
     private int reason_id;
     private List<CancelOrderReasons> cancelOrderReasonsList;
@@ -117,10 +118,11 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                 .putExtra(Const.KEY_INVOICE_NUMBER, InvoiceNumber)
                 .putExtra(Const.KEY_CLIENT_ID, clientId)
                 .putExtra(Const.KEY_ORDER_ID, orderId)
-                .putExtra(Const.KEY_PUBLIC_CHAT, Const.KEY_PUBLIC_CHAT)
+                .putExtra(Const.KEY_CHAT, "chat_public")
                 .putExtra(Const.KEY_STATUS, status)
         );
     }
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -170,7 +172,9 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                 rate = orderDetails.getDriver().getRate();
                 driverId = String.valueOf(orderDetails.getDriver().getId());
 
-            }  invoice_num = orderDetails.getInvoiceNumber();
+            }
+
+            invoice_num = orderDetails.getInvoiceNumber();
             orderId = String.valueOf(orderDetails.getId());
             tvTtitle.setText(new StringBuilder().append("#").append(orderDetails.getInvoiceNumber()));
             tvShopName.setText(orderDetails.getStoreName());
@@ -204,12 +208,13 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                     PreferencesManager.setStringPreferences("vehicleType",vehicleType);
                     PreferencesManager.setStringPreferences("car_number",vehiclePlate);
                     PreferencesManager.setStringPreferences("rate",rate);
-                    PreferencesManager.setStringPreferences(Const.KEY_Store_Lat,destinationLat);
+                     PreferencesManager.setStringPreferences(Const.KEY_Store_Lat,destinationLat);
                     PreferencesManager.setStringPreferences(Const.KEY_Store_Lng,destinationLng);
                     PreferencesManager.setStringPreferences(Const.KEY_INVOICE_NUMBER,invoice_num);
                     PreferencesManager.setStringPreferences(Const.KEY_CLIENT_ID,driverId);
                     PreferencesManager.setStringPreferences(Const.KEY_ORDER_ID,orderId);
-                    PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);
+                    PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);                                        PreferencesManager.setStringPreferences(Const.KEY_CHAT,"chat_public");
+
 
                 });
                 cancel.setVisibility(View.GONE);
@@ -242,7 +247,7 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                         PreferencesManager.setStringPreferences(Const.KEY_INVOICE_NUMBER,invoice_num);
                         PreferencesManager.setStringPreferences(Const.KEY_CLIENT_ID,driverId);
                         PreferencesManager.setStringPreferences(Const.KEY_ORDER_ID,orderId);
-                        PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);
+                        PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);  PreferencesManager.setStringPreferences(Const.KEY_CHAT,"chat_public");
                     });
 
                     cancel.setVisibility(View.VISIBLE);
@@ -269,7 +274,7 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                         PreferencesManager.setStringPreferences(Const.KEY_INVOICE_NUMBER,invoice_num);
                         PreferencesManager.setStringPreferences(Const.KEY_CLIENT_ID,driverId);
                         PreferencesManager.setStringPreferences(Const.KEY_ORDER_ID,orderId);
-                        PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);
+                        PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);  PreferencesManager.setStringPreferences(Const.KEY_CHAT,"chat_public");
                     });
 
                     cancel.setVisibility(View.VISIBLE);
@@ -308,7 +313,8 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                 tv_text_order_details.setVisibility(View.VISIBLE);
 
             }
-            double price = Double.valueOf(orderDetails.getTotal()) - Double.valueOf(orderDetails.getTax());
+            double price = Double.valueOf(orderDetails.getTotal()) - Double.valueOf(orderDetails.getTax()) -  Double.valueOf(orderDetails.getDeliveryCost()) ;
+            price = Double.parseDouble(new DecimalFormat("#.#").format(price));
 
             String productPrice = new StringBuilder()
                     .append(price)
@@ -520,7 +526,8 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                                     PreferencesManager.setStringPreferences(Const.KEY_INVOICE_NUMBER,invoice_num);
                                     PreferencesManager.setStringPreferences(Const.KEY_CLIENT_ID,driverId);
                                     PreferencesManager.setStringPreferences(Const.KEY_ORDER_ID,orderId);
-                                    PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);
+                                    PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);                                        PreferencesManager.setStringPreferences(Const.KEY_CHAT,"chat_public");
+
                                 });
                                 cancel.setVisibility(View.GONE);
                             } else if (status.equals("pending")) {
@@ -550,7 +557,8 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                                         PreferencesManager.setStringPreferences(Const.KEY_INVOICE_NUMBER,invoice_num);
                                         PreferencesManager.setStringPreferences(Const.KEY_CLIENT_ID,driverId);
                                         PreferencesManager.setStringPreferences(Const.KEY_ORDER_ID,orderId);
-                                        PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);
+                                        PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);                                        PreferencesManager.setStringPreferences(Const.KEY_CHAT,"chat_public");
+
                                     });
 
                                     cancel.setVisibility(View.VISIBLE);
@@ -578,7 +586,8 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                                         PreferencesManager.setStringPreferences(Const.KEY_CLIENT_ID,driverId);
                                         PreferencesManager.setStringPreferences(Const.KEY_ORDER_ID,orderId);
                                         PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);
-                                    });
+                                        PreferencesManager.setStringPreferences(Const.KEY_CHAT,"chat_public");
+                                     });
 
                                     cancel.setVisibility(View.VISIBLE);
                                     cancel.setOnClickListener(View -> {
@@ -613,14 +622,14 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                             imagesAdapter = new OrderImagesAdapter(PublicOrderDetailsActivity.this, response.body().getData().getImageData(), R.layout.row_order_images);
                             recyclerImages.setAdapter(imagesAdapter);
 
-                            if (response.body().getData().getAttachments().isEmpty()) {
+                            if (response.body().getData().getImageData().isEmpty()) {
                                 tv_text_order_details.setVisibility(View.GONE);
                             } else {
                                 tv_text_order_details.setVisibility(View.VISIBLE);
 
                             }
-                            double price = Double.valueOf(response.body().getData().getTotal()) - Double.valueOf(response.body().getData().getTax());
-
+                            double price = Double.valueOf(response.body().getData().getTotal()) - Double.valueOf(response.body().getData().getTax())-  Double.valueOf(response.body().getData().getDeliveryCost()) ;
+                             price = Double.parseDouble(new DecimalFormat("#.#").format(price));
                             String productPrice = new StringBuilder()
                                     .append(price)
                                     .append(" ")
@@ -669,7 +678,6 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
 
     }
 
-
     protected void loaderDialog() {
         loader_dialog = new Dialog(this);
         loader_dialog.setContentView(R.layout.loader_dialog);
@@ -701,6 +709,8 @@ public class PublicOrderDetailsActivity extends AppCompatActivity {
                         PreferencesManager.setStringPreferences(Const.KEY_CLIENT_ID,driverId);
                         PreferencesManager.setStringPreferences(Const.KEY_ORDER_ID,orderId);
                         PreferencesManager.setStringPreferences(Const.KEY_STATUS,status);
+                        PreferencesManager.setStringPreferences(Const.KEY_CHAT,"chat_public");
+
                     });
 
                     cancel.setVisibility(View.VISIBLE);

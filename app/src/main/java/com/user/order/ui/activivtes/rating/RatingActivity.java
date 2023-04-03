@@ -117,6 +117,7 @@ public class RatingActivity extends AppCompatActivity {
 
                     if (!response.body().getRatings().getData().isEmpty()){
                         Log.e("", response.body().getRatings().getData()+"");
+                        relNoReviews.setVisibility(View.GONE);
 
                         list = response.body().getRatings().getData();
                         isLoading = false;

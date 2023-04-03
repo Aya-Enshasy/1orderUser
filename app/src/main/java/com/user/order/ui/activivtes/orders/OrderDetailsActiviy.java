@@ -493,7 +493,9 @@ public class OrderDetailsActiviy extends AppCompatActivity {
                     .putExtra(Const.KEY_status, status)
                     .putExtra(Const.KEY_driver_id, driver_id)
                     .putExtra(Const.KEY_Store_Lat, destinationLat)
-                    .putExtra(Const.KEY_Store_Lng, destinationLng));
+                    .putExtra(Const.KEY_Store_Lng, destinationLng)
+                    .putExtra(Const.KEY_CHAT, "chat"));
+            PreferencesManager.setStringPreferences(Const.KEY_CHAT, "chat");
 
             PreferencesManager.setStringPreferences("driver_name",name);
             PreferencesManager.setStringPreferences("mobile",mobile);

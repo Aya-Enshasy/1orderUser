@@ -121,9 +121,9 @@ public class Data implements Serializable
     @SerializedName("driver")
     @Expose
     private Driver driver;
-    @SerializedName("attachments")
-    @Expose
-    private List<com.user.order.model.orders.publicOrders.Attachment> attachments;
+//    @SerializedName("attachments")
+//    @Expose
+//    private List<com.user.order.model.orders.publicOrders.Attachment> attachments;
 
     @SerializedName("attachments")
     private List<ImageData> imageData;
@@ -619,17 +619,14 @@ public class Data implements Serializable
         return this;
     }
 
-    public List<com.user.order.model.orders.publicOrders.Attachment> getAttachments() {
-        return attachments;
-    }
+//    public List<com.user.order.model.orders.publicOrders.Attachment> getAttachments() {
+//        return attachments;
+//    }
+//
+//    public void setAttachments(List<com.user.order.model.orders.publicOrders.Attachment> attachments) {
+//        this.attachments = attachments;
+//    }
 
-    public void setAttachments(List<com.user.order.model.orders.publicOrders.Attachment> attachments) {
-        this.attachments = attachments;
-    }
 
-    public Data withAttachments(List<com.user.order.model.orders.publicOrders.Attachment> attachments) {
-        this.attachments = attachments;
-        return this;
-    }
 
 }

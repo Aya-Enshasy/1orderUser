@@ -45,7 +45,7 @@ public class ConfirmPayActivity extends AppCompatActivity {
     double delivary = 0;
     double tax;
     double price;
-    Boolean RadioButtonState = false, RadioButtonState1 = false, home = false;
+    Boolean RadioButtonState = false, RadioButtonState1 = false, home = false,check=false;
     String origen;
     String shopId, offerId, lat, lng, des_lat, des_lng, address;
     Dialog login_dialog;
@@ -106,6 +106,8 @@ public class ConfirmPayActivity extends AppCompatActivity {
             des_lat = shop.getLat();
             des_lng = shop.getLng();
             address = shop.getAddress();
+            PreferencesManager.setStringPreferences("isOpen",shop.getIsOpen());
+
             if (shop.getIsOpen().equals("")) {
                 binding.tvShopStatus.setText(R.string.close);
                 binding.tvShopStatus.setTextColor(getColor(R.color.red));
@@ -295,7 +297,7 @@ public class ConfirmPayActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    if (delivary != 0.0) {
+                    if (delivary != 0.0&&check==true) {
 
                         double pr = price * quantity;
                         double total = pr + (tax * pr) + 0;
@@ -360,7 +362,7 @@ public class ConfirmPayActivity extends AppCompatActivity {
 
                             if (!response.body().getRoutes().isEmpty()) {
                                 loader_dialog.dismiss();
-
+                                check =true;
                                 double direction1 = response.body().getRoutes().get(0).getLegs().get(0).getDistance().getValue() * 0.001;
                                 direction = direction1;
                                 delivary();
@@ -422,13 +424,6 @@ public class ConfirmPayActivity extends AppCompatActivity {
                                 String tot = new StringBuilder().append(total + "").append(" ").append(HelperMethods.getCurrency(ConfirmPayActivity.this)).toString();
                                 binding.tvTotal.setText(tot);
 
-                                binding.tvTextBill.setVisibility(View.VISIBLE);
-                                binding.relativeLayout.setVisibility(View.VISIBLE);
-                                binding.relativeLayout2.setVisibility(View.VISIBLE);
-                                binding.relativeLayout3.setVisibility(View.VISIBLE);
-                                binding.relativeLayout4.setVisibility(View.VISIBLE);
-                                binding.btnConfirmPay.setVisibility(View.VISIBLE);
-                                binding.textView10.setVisibility(View.GONE);
                             } else {
                                 loader_dialog.dismiss();
 
@@ -496,6 +491,8 @@ public class ConfirmPayActivity extends AppCompatActivity {
                                 binding.tvShopStatus.setText(R.string.open);
                                 binding.tvShopStatus.setTextColor(getColor(R.color.colorBlue));
                             }
+                            PreferencesManager.setStringPreferences("isOpen",response.body().getItem().getShop().getIsOpen());
+
                             price = Double.parseDouble(response.body().getItem().getShop().getOffers().get(0).getPrice());
                             String price1 = new StringBuilder().append(response.body().getItem().getShop().getOffers().get(0).getPrice()).append(" ").append(HelperMethods.getCurrency(ConfirmPayActivity.this)).toString();
                             binding.tvProductPrice.setText(price1);

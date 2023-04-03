@@ -20,12 +20,11 @@ public class RetrofitClient {
     private static String BASE_URL = "https://1order.sa/api/v2/";
 
     public static Retrofit getClient() {
-        //TODO: Understanding HttpLoggingInterceptor and networkInterceptor and implemnt it here
-        HttpLoggingInterceptor httpLogging = new HttpLoggingInterceptor(message -> Log.d(TAG, "getClient: " + message));
+         HttpLoggingInterceptor httpLogging = new HttpLoggingInterceptor(message -> Log.d(TAG, "getClient: " + message));
         httpLogging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient httpClient = new OkHttpClient.Builder()
-                .connectTimeout(1, TimeUnit.MINUTES)
-                .writeTimeout(1, TimeUnit.MINUTES)
+                .connectTimeout(5, TimeUnit.MINUTES)
+                .writeTimeout(50000, TimeUnit.SECONDS)
                 .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
@@ -39,7 +38,7 @@ public class RetrofitClient {
                         return chain.proceed(newRequest);
                     }
                 })
-                .readTimeout(1, TimeUnit.MINUTES)
+                .readTimeout(5, TimeUnit.MINUTES)
                 .addInterceptor(httpLogging)
                 .build();
 

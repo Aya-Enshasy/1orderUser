@@ -23,8 +23,7 @@ import com.user.order.adapter.MyPagerAdapter;
 import com.user.order.adapter.OrdersAdapter;
 import com.user.order.adapter.PublicOrdersAdapter;
 import com.user.order.databinding.FragmentOrdersBinding;
-import com.user.order.model.orders.publicOrders.OrderData;
-import com.user.order.model.orders.publicOrders.PublicOrders;
+ import com.user.order.model.orders.publicOrders.PublicOrders;
 import com.user.order.utils.HelperMethods;
 
 import java.util.ArrayList;

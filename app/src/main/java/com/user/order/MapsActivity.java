@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,7 +34,10 @@ import com.user.order.utils.HelperMethods;
 import com.user.order.utils.PreferencesManager;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,7 +60,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationRequest locationRequest;
     private int maxResults = 1;
     private String keyFrom;
-
+    LatLng center;
+    DeliveryAddress delivery;
+    DeliveryAddress deliveryAddress;
+    String number,number1;
+    Address address;
+    String sLatitude,sLongitude;
     @OnClick(R.id.iv_back)
     void onBackClick() {
         onBackPressed();
@@ -153,56 +162,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onCameraIdle() {
 
-                LatLng center = mMap.getCameraPosition().target;
-                String sLatitude = String.format("%.6f", center.latitude);
-                String sLongitude = String.format("%.6f", center.longitude);
+                center = mMap.getCameraPosition().target;
+
+                  sLatitude = arabicToDecimal(String.format("%.6f", center.latitude));
+                  sLongitude =  arabicToDecimal(String.format("%.6f", center.longitude));
                 StringBuilder mLatLng = new StringBuilder();
                 mLatLng.append(sLatitude);
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(center);
-                DeliveryAddress deliveryAddress = new DeliveryAddress();
-                Geocoder geocoder = new Geocoder(MapsActivity.this, HelperMethods.getAppLocale(MapsActivity.this));
-
-                try {
-                    List<Address> listAddress = geocoder.getFromLocation(Double.parseDouble(sLatitude), Double.parseDouble(sLongitude), maxResults);
-
-                    if (listAddress.size() > 0) {
-
-                        Address address = listAddress.get(0);
-
-                        if (keyFrom != null) {
-                            if (keyFrom.equals(Const.AUTH)) {
-//                                inputAddress.setText(address.getAddressLine(0));
-                            } else {
-                                tvAddress.setText(address.getAddressLine(0));
-                            }
-                        }
-
-                        deliveryAddress.setAddress(address.getAddressLine(0));
-                        deliveryAddress.setOtherAddress(inputAddress.getText().toString());
-                        deliveryAddress.setLatitude(Double.valueOf(sLatitude));
-                        deliveryAddress.setLongitude(Double.valueOf(sLongitude));
-
-                        PreferencesManager.saveDeliveryAddress(MapsActivity.this, Const.KEY_DELIVERY_ADDRESS, deliveryAddress);
 
 
-                        markerOptions.title(address.getAddressLine(0));
+                LatLng latLng = mMap.getCameraPosition().target;
+                new GeocodeTask().execute(latLng);
+//                    markerOptions.title(address.getAddressLine(0));
 
-
-                        DeliveryAddress delivery = PreferencesManager.getDeliveryAddress(MapsActivity.this, Const.KEY_DELIVERY_ADDRESS);
-                        Log.d(TAG, "onMapReady12: " + delivery.getAddress());
-                        PreferencesManager.setStringPreferences(Const.KEY_Address, delivery.getAddress());
-                        tvAddress.setText(delivery.getAddress());
-                        Log.d(TAG, "onMapReady: " + delivery.getLatitude() + "," + delivery.getLongitude());
-
-
-                    }
-
-                } catch (IOException e) {
-                    Log.e(TAG, "onMapReady: " + e.getMessage());
-                    Log.e(TAG, "onMapReady: " + e.getLocalizedMessage());
-                    e.printStackTrace();
-                }
             }
         });
 
@@ -226,4 +199,75 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+        private class GeocodeTask extends AsyncTask<LatLng, Void, List<Address>> {
+        @Override
+        protected List<Address> doInBackground(LatLng... params) {
+             deliveryAddress = new DeliveryAddress();
+
+            Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+            List<Address> listAddress = null;
+            try {
+                listAddress = geocoder.getFromLocation(Double.parseDouble(sLatitude), Double.parseDouble(sLongitude), maxResults);
+                if (listAddress.size() > 0) {
+
+                    address = listAddress.get(0);
+                    String sLatitude = String.format("%.6f", center.latitude);
+                    String sLongitude = String.format("%.6f", center.longitude);
+
+                    if (keyFrom != null) {
+                        if (keyFrom.equals(Const.AUTH)) {
+//                                inputAddress.setText(address.getAddressLine(0));
+                        } else {
+                            tvAddress.setText(address.getAddressLine(0));
+                        }
+                    }
+
+                    number = arabicToDecimal(sLatitude);
+                    number1 = arabicToDecimal(sLongitude);
+
+                    deliveryAddress.setAddress(address.getAddressLine(0));
+                    deliveryAddress.setOtherAddress(inputAddress.getText().toString());
+                    deliveryAddress.setLatitude(Double.parseDouble(number));
+                    deliveryAddress.setLongitude(Double.parseDouble(number1));
+
+                    PreferencesManager.saveDeliveryAddress(MapsActivity.this, Const.KEY_DELIVERY_ADDRESS, deliveryAddress);
+
+                    delivery = PreferencesManager.getDeliveryAddress(MapsActivity.this, Const.KEY_DELIVERY_ADDRESS);
+                    PreferencesManager.setStringPreferences(Const.KEY_Address, delivery.getAddress());
+
+
+
+
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+             }
+            return listAddress;
+        }
+
+        @Override
+        protected void onPostExecute(List<Address> addresses) {
+             if (addresses != null && !addresses.isEmpty()) {
+                 tvAddress.setText(delivery.getAddress());
+            }
+        }
+    }
+
+    private static final String arabic = "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9";
+    private static String arabicToDecimal(String number) {
+        char[] chars = new char[number.length()];
+        for(int i=0;i<number.length();i++) {
+            char ch = number.charAt(i);
+            if (ch >= 0x0660 && ch <= 0x0669)
+                ch -= 0x0660 - '0';
+            else if (ch >= 0x06f0 && ch <= 0x06F9)
+                ch -= 0x06f0 - '0';
+            else if (ch == '٫')
+                ch =  '.';
+             chars[i] = ch;
+        }
+        return new String(chars);
+    }
 }
